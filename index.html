@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Everyday Supply: a fictional store for thoughtfully chosen everyday essentials.">
+  <title>Everyday Supply | Simple things, better days</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#main">Skip to content</a>
+  <p class="announcement text-center mb-0">A little less clutter. A little more everyday.</p>
+
+  <!-- Bootstrap handles the collapsing mobile navigation. -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#home">everyday<span> supply.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#storeNav" aria-controls="storeNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="storeNav">
+          <ul class="navbar-nav ms-auto gap-lg-4">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Shop essentials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Our approach</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- A split hero gives the products room to breathe on wide screens. -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row gx-4 gy-4 align-items-center">
+          <div class="col-lg-6 hero-copy">
+            <p class="eyebrow">THE EVERYDAY COLLECTION / 2026</p>
+            <h1>Simple things.<br><span>Better days.</span></h1>
+            <p class="hero-description">Meet the little essentials that make your daily routine feel a little more considered.</p>
+            <a class="btn btn-brand px-4 py-3" href="#products">Discover the collection <span aria-hidden="true">↗</span></a>
+            <p class="hero-note">For your desk, your bag, and the moments in between.</p>
+          </div>
+          <div class="col-lg-6">
+            <figure class="hero-image mb-0">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85" alt="A warm cup of coffee on a wooden table">
+              <figcaption>Make room for the small rituals.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section-space">
+      <div class="container">
+        <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div><p class="eyebrow">GOOD COMPANY FOR YOUR DAY</p><h2>The essentials edit.</h2></div>
+          <p class="text-secondary mb-1">Four favourites. Plenty of possibilities.</p>
+        </div>
+        <!-- CSS Grid and media queries change four columns to two, then one. -->
+        <div class="product-grid">
+          <article class="product-card card">
+            <div class="product-image"><span class="badge">DESK FAVOURITE</span><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=85" alt="Ceramic coffee mug" loading="lazy"></div>
+            <div class="card-body"><div class="product-title"><h3>Morning Mug</h3><span>₦6,500</span></div><p>A comforting ceramic companion for your first coffee or evening tea.</p><button class="btn btn-shop" type="button" data-product="Morning Mug" data-price="₦6,500" data-bs-toggle="modal" data-bs-target="#productModal">Shop Now <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="product-card card">
+            <div class="product-image"><span class="badge">ON THE GO</span><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85" alt="Everyday backpack" loading="lazy"></div>
+            <div class="card-body"><div class="product-title"><h3>Daily Backpack</h3><span>₦18,000</span></div><p>A practical carry-all for your notebook, daily essentials, and next adventure.</p><button class="btn btn-shop" type="button" data-product="Daily Backpack" data-price="₦18,000" data-bs-toggle="modal" data-bs-target="#productModal">Shop Now <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="product-card card">
+            <div class="product-image"><span class="badge">FRESH IDEAS</span><img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=700&q=85" alt="Notebook ready for writing" loading="lazy"></div>
+            <div class="card-body"><div class="product-title"><h3>Ideas Notebook</h3><span>₦4,500</span></div><p>A fresh page for big ideas, small reminders, and everything in between.</p><button class="btn btn-shop" type="button" data-product="Ideas Notebook" data-price="₦4,500" data-bs-toggle="modal" data-bs-target="#productModal">Shop Now <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="product-card card">
+            <div class="product-image"><span class="badge">LISTEN WELL</span><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=85" alt="Over-ear headphones" loading="lazy"></div>
+            <div class="card-body"><div class="product-title"><h3>Focus Headphones</h3><span>₦24,000</span></div><p>Make space for your favourite playlist, a podcast, or a focused afternoon.</p><button class="btn btn-shop" type="button" data-product="Focus Headphones" data-price="₦24,000" data-bs-toggle="modal" data-bs-target="#productModal">Shop Now <span aria-hidden="true">↗</span></button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section section-space">
+      <div class="container"><div class="row gx-4 gy-4 align-items-center">
+        <div class="col-md-6"><p class="eyebrow">A THOUGHTFUL LITTLE COLLECTION</p><h2>Less searching.<br>More living.</h2></div>
+        <div class="col-md-6"><p class="about-description">Everyday Supply is a fictional store built around a simple idea: useful things deserve good design. This small collection brings together familiar essentials for a calmer desk and a well-packed day.</p><p class="small mb-0">Student design project. Products and prices are illustrative.</p></div>
+      </div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container"><div class="d-flex flex-wrap justify-content-between gap-4">
+      <div><a class="footer-brand" href="#home">everyday supply.</a><p class="small mt-2 mb-0">Simple things. Thoughtfully chosen.</p></div>
+      <div><h2 class="h6">A question about the collection?</h2><a href="mailto:hello@example.com">hello@example.com</a><p class="small mt-2 mb-0">Placeholder email for this fictional store.</p></div>
+    </div><div class="footer-bottom d-flex flex-wrap justify-content-between gap-2"><p class="small mb-0">&copy; 2026 Everyday Supply. Student project.</p><a class="small" href="#home">Back to top ↑</a></div></div>
+  </footer>
+
+  <!-- Shop buttons open an accessible Bootstrap modal; no real checkout. -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="productModalTitle">Product preview</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><p id="selected-product" class="fw-semibold"></p><p>This is a demonstration store. No order has been placed, and no payment is collected.</p></div>
+      <div class="modal-footer"><button type="button" class="btn btn-brand" data-bs-dismiss="modal">Continue browsing</button></div>
+    </div></div>
+  </div>
+</body>
+</html>
